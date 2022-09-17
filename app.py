@@ -12,7 +12,7 @@ def homePage():
     return render_template("index.html")
 
 @app.route('/review',methods=['POST','GET']) # route to show the review comments in a web UI
-@cross_origin()
+@cross_origin()                                                                              # incase if we are using the function from other countires or region
 def index():
     if request.method == 'POST':
         try:
